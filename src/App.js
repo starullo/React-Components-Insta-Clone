@@ -27,7 +27,7 @@ const App = () => {
     return {id: obj.id, likes: obj.likes + 1}
   });
 
-  
+
   const likePost = postId => {
     /*
       This function serves the purpose of increasing the number of likes by one, of the post with a given id.
