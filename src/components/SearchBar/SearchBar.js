@@ -15,7 +15,16 @@ const SearchBar = (props) => {
         <input
           type="text"
           placeholder="Search"
+          value={props.searchedWord.word}
+          onChange={(e)=>{
+            props.setSearchedWord({...props.searchedWord.word, word: e.target.value})}}
         />
+        <button onClick={(e)=>{
+          e.preventDefault();
+          props.setSearched(true)
+          props.setSearchedWord(props.searchedWord.word)
+          console.log(props.searchedWord.word)
+        }}>fuck you</button>
       </form>
       <div className="social-wrapper">
         <div className="social">
